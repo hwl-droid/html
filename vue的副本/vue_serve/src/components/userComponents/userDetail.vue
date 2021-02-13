@@ -30,7 +30,7 @@
     <div>
       <h2>{{ userInfo.name }}</h2>
       <p v-if="userInfo.user_desc">{{ userInfo.user_desc }}</p>
-      <p v-else>这个人很什么，什么都没写</p>
+      <p v-else>这个人很懒什么，什么都没写</p>
     </div>
   </div>
 </template>
