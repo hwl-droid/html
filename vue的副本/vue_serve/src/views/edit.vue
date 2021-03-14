@@ -27,7 +27,10 @@
     <edit-banner left="个性签名" >
       <a href="javascript:;" slot="right" @click="PersonClick($event)">{{ model.user_desc }}</a>
     </edit-banner>
-
+    <p @click="ret($event)">
+      <edit-banner class="return" middle='返回空间'>
+      </edit-banner>
+    </p>
     <van-dialog
       v-model="show"
       title="昵称"
@@ -84,6 +87,9 @@ export default {
       );
       console.log(res);
     },
+    ret(){
+       this.$router.push("/userinof");
+    },
     BannerClick(e){
       console.log(e.target.innerHTML);
       this.text = this.model.name
@@ -116,13 +122,16 @@ export default {
   position: relative;
   overflow: hidden;
   img {
-    width: 12.778vw;
-    height: 12.778vw;
+    width: 9.722vw;
+    height: 9.722vw;
     border-radius: 50%;
   }
   .UploaderImg {
     position: absolute;
     opacity: 0;
   }
+}
+.return{
+  margin-top: 13.889vw;
 }
 </style>

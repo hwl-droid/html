@@ -2,6 +2,7 @@
   <div>
     <div class="editBanner">
       <span>{{ left }}</span>
+      <span>{{ middle }}</span>
       <span><slot name="right"/></span>
     </div>
   </div>
@@ -9,7 +10,7 @@
 
 <script>
 export default {
-  props: ["left"]
+  props: ["left","middle"]
 };
 </script>
 
